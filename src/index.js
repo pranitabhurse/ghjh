@@ -1,5 +1,4 @@
 
-
 var express = require('express');
 
 var cors = require('cors')
@@ -16,13 +15,6 @@ app.use(cors());
 app.use(express.json());
 
 
-
-
-
-
-
-
-
 router.use((req , res , next)=>{
 // console.log('middleware');
 next()
@@ -34,7 +26,7 @@ app.use('/api', require('./ApiForms/Router'));
 
 
 app.get('/',function(req , res){
-    res.send('helloo')
+    res.send('my node js api with ms-sql')
 
 })
 var server = app.listen(5000, function () {
